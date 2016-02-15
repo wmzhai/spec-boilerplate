@@ -1,0 +1,18 @@
+{
+  "name": "spec-md-boilerplate",
+  "version": "0.1.0",
+  "description": "spec-md boilerplate project",
+  "author": "Weiming Zhai",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/wmzhai/spec-md-boilerplate.git"
+  },
+  "scripts": {
+    "build": "mkdir -p out; cp resources/*.css out; spec-md content/index.md > out/index.html",
+    "serve": "cd out && python -m SimpleHTTPServer",
+    "build-watch": "onchange './content/*.md' -- npm run build",
+    "deploy": "sh ./resources/deploy.sh",
+    "clean": "rm -rf out"
+  }
+}
