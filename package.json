@@ -11,7 +11,7 @@
   "scripts": {
     "build": "mkdir -p out; cp resources/*.css out; spec-md content/index.md > out/index.html",
     "serve": "cd out && python -m SimpleHTTPServer",
-    "build-watch": "onchange './content/*.md' -- npm run build",
+    "watch": "onchange './content/*.md' -- npm run build",
     "deploy": "sh ./resources/deploy.sh",
     "clean": "rm -rf out"
   }
